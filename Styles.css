@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1220px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: lightgray;
+}
+
+.nav_list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    padding: 40px 0 60px 0;
+}
+
+.nav_item {
+    padding: 10px;
+    font-size: 30px;
+    background-color: greenyellow;
+    color: white;
+    border-radius: 30px;
+    transition-duration: 2000ms;
+}
+
+.nav_item:hover {
+    background-color: olivedrab;
+    color: black;
+    transform: scale(1.2);
+}
+
+.newsblock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.main_item {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkviolet;
+    color: white;
+    font-size: 25px;
+    transition-duration: 2000ms;
+}
+
+.main_item:hover {
+    transform: rotate(180deg);
+}
+
+.footer {
+    position: relative;
+    height: 200px;
+    padding: 0 5px;
+}
+
+.ball {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: cadetblue;
+    animation-name: jump;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes jump {
+    0% {
+        left: 5px;
+        top: 120px;
+    }
+
+    10% {
+        left: 100px;
+        top: 5px;
+    }
+
+    20% {
+        left: 210px;
+        top: 120px;
+        background-color: skyblue;
+    }
+
+    30% {
+        left: 310px;
+        top: 5px;
+        background-color: yellow;
+    }
+
+    40% {
+        left: 400px;
+        top: 120px;
+        background-color: aqua;
+    }
+
+    50% {
+        left: 500px;
+        top: 5px;
+        background-color: blue;
+    }
+
+    60% {
+        left: 600px;
+        top: 120px;
+        background-color: chartreuse;
+    }
+
+    70% {
+        left: 700px;
+        top: 5px;
+        background-color: lightseagreen;
+    }
+
+    80% {
+        left: 800px;
+        top: 120px;
+        background-color: orange;
+    }
+
+    90% {
+        left: 900px;
+        top: 5px;
+        background-color: deeppink;
+    }
+
+    to {
+        left: 1000px;
+        top: 120px;
+        background-color: greenyellow;
+    }
+}
+
+.ball:hover {
+    animation-play-state: paused;
+}
